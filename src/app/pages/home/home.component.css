@@ -1,0 +1,57 @@
+/* General container styling */
+.container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+ 
+  img {
+    width: 80%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    margin-left: 10%;
+  }
+  
+  mat-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  
+  mat-card-header .mat-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  mat-card-header .mat-card-subtitle {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    img {
+      width: 90%; 
+    }
+  
+    mat-card-header .mat-card-title {
+      font-size: 20px; 
+    }
+  
+    mat-card-header .mat-card-subtitle {
+      font-size: 14px; 
+    }
+  }
+}

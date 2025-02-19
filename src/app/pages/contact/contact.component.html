@@ -1,0 +1,25 @@
+<div class="container">
+    <form [formGroup]="contactForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+      <div class="mb-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="name@example.com" formControlName="email"
+            [ngClass]="{'is-invalid' : hasErrors('email', 'required') || hasErrors('email', 'email')}">
+          <mat-error *ngIf="hasErrors('email', 'required')">You have to complete this field</mat-error>
+          <mat-error *ngIf="hasErrors('email', 'email')">Invalid email format</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="mb-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Message</mat-label>
+          <textarea matInput rows="5" formControlName="message"
+            [ngClass]="{'is-invalid' : hasErrors('message', 'required') || hasErrors('message', 'minlength')}"></textarea>
+          <mat-error *ngIf="hasErrors('message', 'required')">You have to complete this field</mat-error>
+          <mat-error *ngIf="hasErrors('message', 'minlength')">You have to write at least 10 characters</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>

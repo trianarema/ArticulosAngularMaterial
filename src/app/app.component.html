@@ -1,0 +1,15 @@
+<div class="general-styles">
+  <mat-toolbar color="primary">
+    <span class="title">Best Products</span>
+
+    <span class="spacer"></span>
+
+    <nav>
+      <a mat-button routerLink="" [ngClass]="{active: menuOption == 'home'}" (click)="onOption('home')">Home</a>
+      <a mat-button routerLink="products" [ngClass]="{active: menuOption == 'products'}" (click)="onOption('products')">Products</a>
+      <a mat-button routerLink="contact" [ngClass]="{active: menuOption == 'contact'}" (click)="onOption('contact')">Contact</a>
+    </nav>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+</div>

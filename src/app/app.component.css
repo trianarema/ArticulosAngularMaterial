@@ -1,0 +1,12 @@
+.general-styles{
+    background-color: black;
+    color: white;
+}
+
+mat-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
